@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LAB · SHAPES | Cool Matt Games</title>
+<meta name="description" content="An RPG where you start as a dot. Fight, level up, grow, and recruit a party that becomes a line, a triangle, a square and a pentagon. Free, by Matt Jones.">
+<meta name="theme-color" content="#0f6fd0">
+<meta property="og:title" content="SHAPES | Cool Matt Games">
+<meta property="og:description" content="An RPG where you start as a dot and end up a pentagon.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://coolmattgames.io/games/shapes/">
+<link rel="canonical" href="https://coolmattgames.io/games/shapes/">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../games/shapes/shp.css">
+</head>
+<body><aside style="background:#241946;color:#fff;padding:12px;text-align:center;font:14px system-ui">Experimental arcade · Games and visuals may change. <a style="color:#b5fbdc" href="https://coolmatt.games">Visit the main arcade</a></aside>
+<a class="skip" href="#main">Skip to the game</a>
+<div class="sky-bubbles" aria-hidden="true"></div>
+
+<div class="page">
+  <header class="topbar">
+    <a class="brand" href="../../"><span class="brand-orb" aria-hidden="true"></span>Cool Matt Games</a>
+    <nav class="nav" aria-label="Site">
+      <a href="../../">Games</a>
+      <a href="../../about/">About Matt</a>
+    </nav>
+  </header>
+
+  <main id="main" class="game-desk wide">
+    <section class="win game-win" aria-labelledby="game-title">
+      <div class="win-bar">
+        <h1 id="game-title">SHAPES</h1>
+        <span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+      </div>
+      <div class="win-body">
+        <div class="shp">
+          <div class="shp-stage">
+            <canvas id="game" width="480" height="320" role="img" aria-label="SHAPES game view. The menus and battle commands are the buttons below it."></canvas>
+          </div>
+          <div class="shp-panel" id="panel"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="stack">
+      <section class="win" aria-labelledby="how-title">
+        <div class="win-bar">
+          <h2 id="how-title">How to play</h2>
+          <span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        </div>
+        <div class="win-body">
+          <p>You start as a dot. Tap where you want to walk, or use the arrow keys. Bump into another shape to fight it.</p>
+          <ul class="plain-list">
+            <li><strong>Win fights to earn XP.</strong> Level up and your dot gets bigger and stronger.</li>
+            <li><strong>Beat each area's boss</strong> and a new dot joins you. Two dots make a line, three a triangle, four a square, five a pentagon.</li>
+            <li><strong>Charge your Shape move</strong> by giving and taking hits. The more corners you have, the harder it lands.</li>
+            <li><strong>Walk into the Inn</strong> to rest and <strong>the Shop</strong> to buy items and sharpen up.</li>
+          </ul>
+          <p>The road runs east: Dot Central, Linetown, Trianglewood, Squaresville, Dodecahedown Town.</p>
+        </div>
+      </section>
+
+      <section class="win" aria-labelledby="save-title">
+        <div class="win-bar">
+          <h2 id="save-title">Saving</h2>
+          <span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        </div>
+        <div class="win-body">
+          <p>Your Cool Matt account is a name kept in this browser. The game saves by itself after every battle.</p>
+          <p>To carry on from another phone or computer, open Account in the game, copy your save code, and load it there.</p>
+          <div class="btn-row">
+            <a class="btn btn-quiet" href="../../">More games</a>
+            <a class="btn btn-quiet" href="../../about/">About Matt</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="status">
+    <p>Games played on this device <span class="lcd" data-plays>000000</span></p>
+    <p>Made in Houston, Texas by Matt Jones, 2026</p>
+  </footer>
+</div>
+
+<script src="../../assets/site.js"></script>
+<script src="../../games/shapes/shapes.js"></script>
+</body>
+</html>
