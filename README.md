@@ -14,15 +14,11 @@ The homepage offers three backgrounds and CSS-grid, Canvas-starfield, or plain r
 
 ## Release
 
-Only `site/` is published from the `pages` branch. Commit source changes to `main`, then run:
+Only `site/` is published from the `pages` branch. After committing source changes on `main`, run `bash scripts/deploy-pages.sh`. This preserves Pages branch history without force pushes.
 
-```bash
-git push origin main
-git subtree split --prefix site -b lab-release
-git push origin lab-release:pages
-```
+Live preview: https://matt-jones-llc.github.io/coolmattgames.io/
 
-For subsequent releases use `git subtree split --prefix site` and push the resulting SHA to `pages`, without force. Do not deploy this repository to coolmatt.games. The .io custom domain remains pending until GoDaddy forwarding is removed and DNS points to Pages.
+The .io custom domain remains pending until GoDaddy forwarding is removed and DNS points to Pages. See [domain cutover](docs/domain-cutover.md).
 
 ## Promotion
 
