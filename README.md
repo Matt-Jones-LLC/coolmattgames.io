@@ -27,3 +27,7 @@ For subsequent releases use `git subtree split --prefix site` and push the resul
 ## Promotion
 
 Port selected changes to production through review and testing. Browser saves are isolated by domain. The copied game code retains its Apache 2.0 license; see LICENSE.
+
+## Optional Datadog diagnostics
+
+Performance, error, and game-start monitoring is included but remains disabled until public RUM identifiers are configured. Visitors opt in through the diagnostics control; replay is off and browser privacy signals are respected. API/application keys never belong in browser code.
