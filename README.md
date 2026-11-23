@@ -16,9 +16,9 @@ The homepage offers three backgrounds and CSS-grid, Canvas-starfield, or plain r
 
 Only `site/` is published from the `pages` branch. After committing source changes on `main`, run `bash scripts/deploy-pages.sh`. This preserves Pages branch history without force pushes.
 
-Live preview: https://matt-jones-llc.github.io/coolmattgames.io/
+Live: https://coolmattgames.io. The earlier preview address, https://matt-jones-llc.github.io/coolmattgames.io/, redirects there.
 
-The .io custom domain remains pending until GoDaddy forwarding is removed and DNS points to Pages. See [domain cutover](docs/domain-cutover.md).
+The custom domain was attached on November 22, 2026. `site/CNAME` keeps it attached across releases; do not remove it. See [domain cutover](docs/domain-cutover.md) for what changed.
 
 ## Promotion
 
