@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LAB · Overnight Shift | Cool Matt Games</title>
+<meta name="description" content="You're the only support agent online. Pop every ticket before it floats away and make it to 8 AM. A free browser game by Matt Jones.">
+<meta name="theme-color" content="#0f6fd0">
+<meta property="og:title" content="Overnight Shift | Cool Matt Games">
+<meta property="og:description" content="You're the only support agent online. Pop every ticket before it floats away and make it to 8 AM.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://coolmattgames.io/games/overnight-shift/">
+<link rel="canonical" href="https://coolmattgames.io/games/overnight-shift/">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/site.css">
+<script defer src="../../assets/monitoring-config.js"></script>
+<script defer src="../../assets/monitoring.js"></script>
+</head>
+<body><aside style="background:#241946;color:#fff;padding:12px;text-align:center;font:14px system-ui">Experimental arcade · Games and visuals may change. <a style="color:#b5fbdc" href="https://coolmatt.games">Visit the main arcade</a></aside>
+<a class="skip" href="#main">Skip to the game</a>
+<div class="sky-bubbles" aria-hidden="true"></div>
+
+<div class="page">
+  <header class="topbar">
+    <a class="brand" href="../../"><span class="brand-orb" aria-hidden="true"></span>Cool Matt Games</a>
+    <nav class="nav" aria-label="Site">
+      <a href="../../">Games</a>
+      <a href="../../about/">About Matt</a>
+    </nav>
+  </header>
+
+  <main id="main" class="game-desk">
+    <section class="win game-win" aria-labelledby="game-title">
+      <div class="win-bar">
+        <h1 id="game-title">Overnight Shift</h1>
+        <span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+      </div>
+      <div class="win-body">
+        <div class="stage">
+          <canvas id="game" width="360" height="540" tabindex="-1" role="img" aria-label="Overnight Shift playfield: bubbles rise from a city skyline at night. Tap or click them to pop them."></canvas>
+
+          <div class="screen" id="screen-start">
+            <h2>Overnight Shift</h2>
+            <p>It's midnight. You're the only agent online. Pop every ticket before it floats away, and hold the queue until 8 AM.</p>
+            <button class="btn" id="btn-start" type="button">Start shift</button>
+            <p>Best score <span class="lcd" id="best">0</span></p>
+          </div>
+
+          <div class="screen" id="screen-pause" hidden>
+            <h2>Paused</h2>
+            <p>The queue is waiting politely.</p>
+            <button class="btn" id="btn-resume" type="button">Resume shift</button>
+          </div>
+
+          <div class="screen" id="screen-end" hidden>
+            <h2 id="end-title">Shift complete</h2>
+            <p id="end-line" aria-live="polite"></p>
+            <dl>
+              <dt>Score</dt><dd><span class="lcd" id="s-score">0</span></dd>
+              <dt>Customer satisfaction</dt><dd><span class="lcd" id="s-csat">100%</span></dd>
+              <dt>Best combo</dt><dd><span class="lcd" id="s-combo">0</span></dd>
+              <dt>Clocked out</dt><dd><span class="lcd" id="s-clock">12:00 AM</span></dd>
+            </dl>
+            <button class="btn" id="btn-again" type="button">Start another shift</button>
+            <p><a href="../../about/">Meet the agent this is based on</a></p>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button class="btn btn-quiet" id="btn-pause" type="button" disabled>Pause</button>
+          <button class="btn btn-quiet" id="btn-sound" type="button" aria-pressed="true">Sound: on</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="stack">
+      <section class="win" aria-labelledby="how-title">
+        <div class="win-bar">
+          <h2 id="how-title">How to play</h2>
+          <span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        </div>
+        <div class="win-body">
+          <p>Tap or click a bubble to pop it. Every ticket that floats off the top costs a heart, and you have five. Pop without missing to build a combo, up to five times the points.</p>
+          <ul class="legend">
+            <li><i class="ticket" aria-hidden="true"></i><span><strong>Ticket.</strong> One tap. 10 points.</span></li>
+            <li><i class="vip" aria-hidden="true"></i><span><strong>VIP.</strong> Small and fast. 30 points.</span></li>
+            <li><i class="esc" aria-hidden="true"></i><span><strong>Escalation.</strong> Three taps, and each one knocks it back down. 50 points.</span></li>
+            <li><i class="spam" aria-hidden="true"></i><span><strong>Spam.</strong> Leave it alone. Tapping it costs a heart.</span></li>
+            <li><i class="coffee" aria-hidden="true"></i><span><strong>Coffee.</strong> Slows everything down for a few seconds.</span></li>
+            <li><i class="macro" aria-hidden="true"></i><span><strong>Macro.</strong> Clears every ticket and VIP on screen.</span></li>
+          </ul>
+          <p>On a keyboard, P pauses and M mutes.</p>
+        </div>
+      </section>
+
+      <section class="win" aria-labelledby="true-title">
+        <div class="win-bar">
+          <h2 id="true-title">Based on a true story</h2>
+          <span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        </div>
+        <div class="win-body">
+          <p>Matt worked the overnight support shift at a telehealth company for four years, as the only agent online. The real queue had fewer bubbles and more coffee.</p>
+          <div class="btn-row">
+            <a class="btn btn-quiet" href="../../about/">About Matt</a>
+            <a class="btn btn-quiet" href="../../">More games</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="status">
+    <p>Games played on this device <span class="lcd" data-plays>000000</span></p>
+    <p>Made in Houston, Texas by Matt Jones, 2026</p>
+  </footer>
+</div>
+
+<script src="../../assets/site.js"></script>
+<script src="../../games/overnight-shift/game.js"></script>
+</body>
+</html>

@@ -1,9 +1,9 @@
-# AWS deployment preparation
+# Domain alias migration
 
-The hosting stack and migration runbook live in [Matt-Jones-LLC/matt-jones.org](https://github.com/Matt-Jones-LLC/matt-jones.org), on branch `codex/aws-migration-review`, at `infra/sites.cloudformation.json` and `docs/aws-migration.md`.
+`coolmattgames.io` and `www.coolmattgames.io` will redirect with HTTP 301 to `https://coolmatt.games`, preserving paths and query strings. Both aliases attach to the arcade CloudFront distribution and its ACM certificate. No separate S3 bucket, deployment role, workflow or Datadog monitor is needed for this repository.
 
-This repository owns only its own `infra/site.json`, public asset packager, deploy script and gated AWS workflow. The workflow is disabled until `AWS_DEPLOY_ENABLED=true` and the site-specific bucket, distribution ID and OIDC role variables are configured. Existing Pages deployment is retained during validation. No DNS change is made by these files.
+The existing experimental source remains available in GitHub. Keep its current Pages deployment available during DNS validation and rollback; these changes do not alter DNS or Pages settings.
 
-Run `node scripts/package-aws.cjs` and `bash -n scripts/deploy-aws.sh` before release. Review the `_aws_site/` artifact, including the homepage, game routes, assets and 404 page. Never upload the entire repository root.
+The shared stack and exact rollout are in [company migration PR #3](https://github.com/Matt-Jones-LLC/matt-jones.org/pull/3); the arcade deployment is in [arcade PR #16](https://github.com/Matt-Jones-LLC/cool-matt-games/pull/16). Validate HTTPS redirects for apex and www, nested paths and repeated query values before cutover. Preserve mail and unrelated DNS records.
 
-Workflow activation: `infra/aws-workflow.yml` is a template. Copy it to `.github/workflows/aws.yml` through an account authorized to write workflows before expecting any AWS deployments. The current CLI token lacks that scope; no workflow permission was broadened.
+Three logical sites: mattjonesllc.com (matt-jones.org alias), coolmatt.games (coolmattgames.io alias), and future flashisdead.com (no repo yet). Combined monthly allowance remains $50: up to $30 AWS and $20 additional Datadog. Flash resources are deferred; budget alerts are not hard spending caps.
